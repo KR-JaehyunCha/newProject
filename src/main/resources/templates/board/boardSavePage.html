@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/boardSavePage.css}" rel="stylesheet" />
+</head>
+<body>
+<div style="margin-left: 100px; margin-top: 200px;">
+    <form action="/boardSave" method="post">
+        <label for="boardTitle">Question</label>  <br>
+        <input type="text" name="boardTitle" id="boardTitle"> <br>
+        <label for="boardContent"></label> <br>
+        <textarea name="boardContent" id="boardContent" cols="30" rows="10" placeholder="Please Be Specific"></textarea> <br>
+        <input type="submit" value="Save">
+    </form>
+</div>
+</body>
+</html>

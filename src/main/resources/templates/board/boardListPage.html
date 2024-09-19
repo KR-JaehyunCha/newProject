@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div style="margin-left: 100px; margin-top: 200px;">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>글제목</th>
+      <th>글내용</th>
+      <th>글작성시간</th>
+    </tr>
+    <tr th:each="board : ${boardList}">
+      <td><a th:href="@{/boardDetailPage(id=${board.id})}" th:text="${board.id}"></a></td>
+      <td><a th:href="@{/boardDetailPage(id=${board.id})}" th:text="${board.boardTitle}"></a></td>
+      <td><a th:href="@{/boardDetailPage(id=${board.id})}" th:text="${board.boardContent}"></a></td>
+      <td><a th:href="@{/boardDetailPage(id=${board.id})}" th:text="${board.boardCreateTime}"></a></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

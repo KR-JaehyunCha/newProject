@@ -1,0 +1,12 @@
+h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    font-size: 40px;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
