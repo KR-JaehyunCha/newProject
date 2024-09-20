@@ -5,13 +5,13 @@
   <title>Title</title>
 </head>
 <body>
-<div style="margin-left: 100px; margin-top: 200px;">
+<div>
   <table>
     <tr>
       <th>ID</th>
-      <th>글제목</th>
-      <th>글내용</th>
-      <th>글작성시간</th>
+      <th>Title</th>
+      <th>Context</th>
+      <th>Written Time</th>
     </tr>
     <tr th:each="board : ${boardList}">
       <td><a th:href="@{/boardDetailPage(id=${board.id})}" th:text="${board.id}"></a></td>

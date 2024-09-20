@@ -1,4 +1,35 @@
-label {
+/* Center the entire content */
+body {
+    margin-top: 40px;
+}
+
+label{
+    font-size: 1.5em;
+}
+
+#boardSavePage_Id {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    height: 90vh;           /* Full height of the viewport */
+}
+
+form {
+    display: flex;
+    flex-direction: column;  /* Stack the form elements vertically */
+    align-items: center;     /* Center the form content horizontally */
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%; /* Adjust width as per need */
+    max-width: 500px; /* Limits the width of form inputs */
+}
+
+input[type="submit"] {
+    width: auto;
+    padding: 8px 15px;
 }

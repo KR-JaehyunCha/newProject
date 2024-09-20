@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Question Form</title>
     <link th:href="@{/css/boardSavePage.css}" rel="stylesheet" />
 </head>
 <body>
-<div style="margin-left: 100px; margin-top: 200px;">
-    <form action="/boardSave" method="post">
-        <label for="boardTitle">Question</label>  <br>
-        <input type="text" name="boardTitle" id="boardTitle"> <br>
-        <label for="boardContent"></label> <br>
-        <textarea name="boardContent" id="boardContent" cols="30" rows="10" placeholder="Please Be Specific"></textarea> <br>
+<div id="boardSavePage_Id">
+    <form action="/boardSave" method="post" id="boardSavePage_Id_Question">
+        <label for="boardTitle">Question</label> <br>
+        <input type="text" name="boardTitle" id="boardTitle">
+        <input type="file" name="file" id="file" accept="image/jpeg, image/png, pdf">
+        <label for="boardContent"></label>
+        <textarea name="boardContent" id="boardContent" cols="60" rows="30" placeholder="Please Be Specific"></textarea> <br>
         <input type="submit" value="Save">
     </form>
 </div>
