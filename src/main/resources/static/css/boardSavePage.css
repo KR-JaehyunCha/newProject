@@ -1,35 +1,68 @@
-/* Center the entire content */
+/* boardSavePage.css */
 body {
-    margin-top: 40px;
-}
-
-label{
-    font-size: 1.5em;
+    font-family: Arial, sans-serif;
+    background-color: #e9f7f2; /* 밝은 민트색 배경 */
+    margin: 0;
+    padding: 20px;
 }
 
 #boardSavePage_Id {
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center;     /* Vertically center */
-    height: 90vh;           /* Full height of the viewport */
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
-    display: flex;
-    flex-direction: column;  /* Stack the form elements vertically */
-    align-items: center;     /* Center the form content horizontally */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* 제목과 내용 간의 여백 */
+}
+
+label {
+    font-weight: bold;
+    margin-top: 15px; /* 레이블과 입력 필드 간의 여백 */
+    display: block;
+    color: #5a9b8a; /* 밝은 색의 글자 */
 }
 
 input[type="text"],
-textarea,
-input[type="file"] {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100%; /* Adjust width as per need */
-    max-width: 500px; /* Limits the width of form inputs */
+input[type="file"],
+textarea {
+    width: calc(100% - 20px); /* 전체 너비에서 패딩을 제외 */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #d1e8e4; /* 연한 회색 테두리 */
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+textarea:focus {
+    border-color: #5c67f2; /* 포커스 시 테두리 색상 */
+}
+
+textarea {
+    resize: vertical;
 }
 
 input[type="submit"] {
-    width: auto;
-    padding: 8px 15px;
+    background-color: #5c67f2; /* 밝은 파란색 */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* 버튼과 입력 필드 간의 여백 */
+    width: 100%; /* 버튼 전체 너비 */
+}
+
+input[type="submit"]:hover {
+    background-color: #4b54d2; /* 어두운 파란색 호버 */
 }

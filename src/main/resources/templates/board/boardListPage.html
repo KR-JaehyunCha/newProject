@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <link th:href="@{/css/boardListPage.css}" rel="stylesheet" />
 </head>
+<div>
+  <span>Board Q&A List</span>
+</div>
 <body>
 <div>
   <table>
     <tr>
-      <th>ID</th>
+      <th>No.</th>
       <th>Title</th>
       <th>Context</th>
-      <th>Written Time</th>
+      <th>Time</th>
     </tr>
     <tr th:each="board : ${boardList}">
       <td><a th:href="@{/boardDetailPage(id=${board.id})}" th:text="${board.id}"></a></td>

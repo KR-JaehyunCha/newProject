@@ -61,7 +61,7 @@ public class BoardController {
         // Calculating (Starting Page)
         int startPage = (((int)(Math.ceil((double)pageable.getPageNumber() / blockLimit))) - 1) * blockLimit + 1;
         // Calculating (Ending Page)
-        int endPage = ((startPage + blockLimit - 1) < boardDTOList.getTotalPages()) ? startPage + blockLimit - 1 : boardDTOList.getTotalPages();
+        int endPage = Math.min((startPage + blockLimit - 1), boardDTOList.getTotalPages());
 
         model.addAttribute("boardList", boardDTOList);
         model.addAttribute("startPage", startPage);
